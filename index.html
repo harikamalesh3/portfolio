@@ -1,0 +1,109 @@
+<! DOCTYPE html>
+<html lanf="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equi="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Hariharan E</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#header">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm<span> Hariharan</span><br> From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/hari.jpg.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hi, I’m Hariharan E, currently pursuing my B.E. in Computer Science Engineering at Karpagam Institute of Technology, Coimbatore. As a Final-year student, I am deeply passionate about software development, coding, and the ever-evolving world of technology. Throughout my academic journey, I’ve developed a strong foundation in programming languages like Python, Java, and C, along with key concepts in computer science such as algorithms, databases, and networking.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    </div>
+                    <div class="tab_contents active-tab" id="skills">
+                        <ul>
+                            <li><span>MERN Stack</span><br>Build full-stack web applications using MongoDB, Express.js, React, and Node.js</li>
+                            <li><span>Java</span><br>Design web and mobile applications</li>
+                            <li><span>Database</span><br>Work with MySQL and PostgreSQL</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="Education">
+                        <ul>
+                            <li><span>B.E Computer Science Engineering (2022 - 2026)</span><br>Karpagam Institute of Technology, Coimbatore<br> CGPA: 7.9</li>
+                            <li><span>Higher Secondary - II year</span><br>Sri rajarajeshwari metric higher secondary school<br> Percentage: 84%</li>
+                            <li><span>SSLC</span><br>Sri rajarajeshwari metric higher secondary school<br>Percentage: 80.6%</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="Experience">
+                        <ul>
+                            <li><span>Hubble Tech Solutions</span><br>Attended Internship, learned about web essentials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------contact---->
+
+<div id="contact">
+    <div class="container">
+        <div class="contactleft">
+            <h1 class="sub-title">Contact me</h1>
+            <p>harikamalesh32@gmail.com</p><br>
+            <div class="socialmedia">
+                <a href="https://www.linkedin.com/in/hariharan-4a28a7269/"><i class="fab fa-linkedin"></i></a>&nbsp;
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div><br>
+            <a href="images/Hari_resume.pdf" download class="btn btn2">Download Resume</a>
+        </div>
+        <div class="contact-right">
+            <form action="https://formspree.io/f/movwwvpo" method="POST">
+                <input type="text" name="Name" placeholder="Enter yor name" required>
+                <input type="email" name="email" placeholder="enter the email" required>
+                <textarea name="message" rows="6" placeholder="your message"></textarea>
+                <button type="Submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab_contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+
+</script>
+</body>
+</html>
